@@ -18,7 +18,25 @@ if (isset($_POST["height"]) && isset($_POST["weight"])) {
 
     $bmi = $weight/($height*$height);
 
-    echo "Chỉ sô BMI là : " . $bmi;
+    echo "<br>Chỉ sô BMI là : " . $bmi;
+
+    if ($bmi < 18.5) {
+        echo "<br> Phân loại gầy";
+    } elseif ( ($bmi >= 18.5) && ($bmi <= 24.9 ) ) {
+        echo "<br>Bình thường";
+    } elseif ( ($bmi >= 25) && ($bmi <= 29.9 )) {
+        echo "<br> Hơi béo";
+    } elseif ( ($bmi >= 30) && ($bmi <= 34.9 )) {
+        echo "<br> Béo phì độ 1";
+    } elseif ( ($bmi >= 35) && ($bmi <= 39.9 )) {
+        echo "<br> Béo phì độ 2";
+    } elseif ($bmi >= 40) {
+        echo "<br> Béo phì độ 3";
+    } else {
+        echo "<br> Không xác định";
+    }
+
+
 }
 ?>
 
