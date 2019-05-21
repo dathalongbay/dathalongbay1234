@@ -13,8 +13,8 @@ if (isset($_POST["height"]) && isset($_POST["weight"])) {
     echo "<pre>";
     print_r($_POST);
     echo "</pre>";
-    $weight = (int) $_POST["weight"];
-    $height = (int) $_POST["height"];
+    $weight = $_POST["weight"];
+    $height = $_POST["height"];
 
     $bmi = $weight/($height*$height);
 
