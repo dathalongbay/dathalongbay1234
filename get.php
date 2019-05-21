@@ -8,13 +8,13 @@
 
 <?php
 $weight = $height = '';
-if (isset($_POST["height"]) && isset($_POST["weight"])) {
+if (isset($_GET["height"]) && isset($_GET["weight"])) {
 
     echo "<pre>";
-    print_r($_POST);
+    print_r($_GET);
     echo "</pre>";
-    $weight = $_POST["weight"];
-    $height = $_POST["height"];
+    $weight = $_GET["weight"];
+    $height = $_GET["height"];
 
     $bmi = $weight/($height*$height);
 
@@ -45,7 +45,7 @@ if (isset($_POST["height"]) && isset($_POST["weight"])) {
         <div class="col-sm-12">
             <h1>Tính chỉ số BMI</h1>
 
-            <form name="bmi" action="" method="post">
+            <form name="bmi" action="" method="get">
                 <div class="form-group">
                     <label >Chiều cao ( cm )</label>
                     <input type="text" class="form-control" name="height" value="<?php echo $height ?>">
